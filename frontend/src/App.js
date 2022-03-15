@@ -53,11 +53,11 @@ function App() {
       <Link to="/contact">Contact
 
       </Link>
-      <Link to="/cart">Cart
+      {/* <Link to="/cart">Cart
       {cartItems.length>0 &&(<span className='badge'>
         {cartItems.length}</span>)} 
 
-      </Link>
+      </Link> */}
       {userInfo?(
        <div className='dropdown'>
       <Link to="#">{userInfo.name}<i className='fa fa-caret-down'></i>{' '}
