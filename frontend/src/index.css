@@ -1,0 +1,801 @@
+
+html {
+  font-size: 62.5%; /* 16px x 62.5 = 10px = 1rem */
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root{
+  height:100%;
+}
+/* Layout */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+header {
+  grid-area: header;
+  background-color: #203040;
+}
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+footer {
+  grid-area: footer;
+  background-color: #203040;
+  color: #ffffff;
+}
+/* Common */
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #ff8000;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+li {
+  margin-top: 1rem;
+}
+input,select,textarea,
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+button{
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+input:hover,select:hover,textarea:hover,
+button:hover {
+  border: 0.1rem #404040 solid;
+}
+button.primary {
+  background-color: #f0c040;
+}
+input.primary {
+  background-color: #f0c040;
+}
+button.block {
+  width: 100%;
+}
+/* Header */
+header a {
+  color: #ffffff;
+  padding: 1rem;
+}
+a.brand {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.badge{
+  background-color: #a02020;
+  color:#ffffff;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size:1.4rem ;
+  margin-left:0.2rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.row.center {
+  justify-content: center;
+}
+.row.topar {
+  align-items: flex-start;  border-radius: 50%;
+
+}
+.row.top {
+  align-items: flex-start;
+}
+.col-1 {
+  flex: 1 1 25rem;
+}
+.col-2 {
+  flex: 2 1 50rem;
+}
+.col-3 {
+  flex: 2 1 50rem;
+  border-radius: 50%;
+}
+.min-30{
+  min-width: 30rem;
+}
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2 {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+a.brand {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.row.center {
+  justify-content: center;
+}
+/* Image */
+img {
+  border-radius: 0.5rem;
+}
+img.small{
+  max-width: 5rem;
+  width:100%;
+}
+img.medium {
+  max-width: 29rem;
+  width: 100%;
+}
+
+img.large {
+  width: 100%;
+}
+img.largead {
+  width: 100%;  border-radius: 50%;
+
+}
+
+/* Card */
+.card {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.card-body {
+  padding: 1rem;
+}
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+.price {
+  font-size: 2rem;
+}
+/* Rating */
+.rating span {
+  color: #f0c040;
+  margin: 0.1rem;
+}
+ 
+.rating span:last-child {
+  color: #404040;
+}
+/* Alert */
+.success {
+  color: #20a020;
+}
+.danger {
+  color: #a02020;
+}
+.alert{
+  padding:1rem;
+  border:0.1rem solid transparent;
+  border-radius: 0.5rem;
+  ;
+}
+.alert-info{
+  color:#2020a0;
+  background-color:#e0e0ff;
+
+
+}
+.alert-danger{
+  color:#a02020;
+  background-color: #ffe0e0e0;
+
+
+}
+.alert-success{
+  color:#06241f;
+  background-color: #6f9e98e0;
+
+
+}
+.form{
+  max-width: 60rem;
+  margin:0 auto;
+}
+.form > div{
+  display:flex;
+  flex-direction: column;
+  margin:1rem;
+}
+.form label{
+  margin:1rem 0;
+}
+/*dropdown*/
+.dropdown
+{
+  display: inline-block;
+  position:relative;
+}
+.dropdown-content
+{
+  position:absolute;
+  display:none;
+  right:0;
+  min-width: 12rem;
+  padding:1rem;
+  z-index:1;
+  background-color: #203040;
+  margin:0;
+  margin-top: 0.4rem;
+  border-radius: 0.5rem;
+}
+.dropdown:hover .dropdown-content{
+  display:block;
+
+}
+.loading{
+  display:block !important
+}
+/*checkou step*/
+.checkout-steps > div
+{
+  border-top:0.3rem #c0c0c0 solid;
+  color:#c0c0c0;
+  flex:1;
+  padding:1rem;
+}
+.checkout-steps > div.active{
+  border-top-color:#f08000;
+  color:#f08000;
+}
+/*style about me+resume*/
+
+
+
+body {
+  margin: 100;
+  top:200px;
+  color:black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html{
+  border-color:hsl(0, 0%, 0%);
+  box-sizing: border-box;
+  }
+  @media screen {
+    
+  }
+  .navbar{background-color: rgb(238, 196, 217);
+color: hsl(0, 0%, 0%);
+  }
+
+  .container {  display: grid;
+    grid-template-columns: 0.8fr 1.8fr 1fr;
+    grid-template-rows: 0.4fr 2.2fr 1.9fr 2fr 2.5fr 0.7fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+  }
+  
+  .IMG { grid-area: 2 / 1 / 3 / 4; }
+  
+  .HEADER { grid-area: 1 / 1 / 2 / 4; 
+  background-color: rgb(204, 183, 204); height: 70px;color:white;text-align: center; padding: 1rem;margin-bottom: 0px;}
+  HEADER a{
+    color :white;
+    padding:1rem;
+  }
+  .brand{
+    color:white;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  a{
+    text-decoration: none;
+  }
+  a:hover{
+    color:orange;
+  }
+  
+  .Mymain { grid-area: 3 / 2 / 4 / 4; }
+  
+  .Mymain { grid-area: 3 / 2 / 4 / 4;
+     background-color: white;text-align: center;
+     justify-items: center;padding-left: 10%;
+     justify-content:center;
+    }
+  .Mymain div{
+    flex:content;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 0px;
+    height:300px;
+    width:400px;
+    color:rgb(27, 26, 26);
+   background-color: rgb(204, 194, 200) ;
+   border-radius: 25% 10%;
+  }
+  .Mymain p{text-align: left ;font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;font-size: 18px;line-height: 2em;border-radius: 25% 10%;}
+  .Mymain span{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-shadow: violet;color:rgb(208, 208, 221)}
+  
+  .BANNER { grid-area: 4 / 2 / 5 / 4; }
+  
+  .ADVERTIZE { grid-area: 5 / 2 / 6 / 3; background-color: rgb(241, 97, 97);}
+  
+  .IMG2 { grid-area: 5 / 3 / 6 / 4; 
+  
+    background: rgb(244, 247, 247) 
+    
+    url("https://www.morgane-pastel.com/wp-content/uploads/2019/03/fond-ecran-la-vie-est-belle-iphone6-576x1024.jpg") 
+    no-repeat fixed center;}
+  
+  .MyFooter { grid-area: 6 / 1 / 7 / 4; background-color:rgb(243, 189, 225);}
+  
+  .IMG3 { grid-area: 4 / 3 / 5 / 4;  
+    background: url("https://www.morgane-pastel.com/wp-content/uploads/2020/11/sachet-the-chat-768x768.png") no-repeat  center;
+  }
+  
+  .SIDEBAR { grid-area: 2 / 1 / 6 / 2;      background: url("https://i.pinimg.com/736x/b7/b8/2e/b7b82e8f122a767022ce1f0eb6799716.jpg"); 
+
+   
+ height:100%;
+  }
+  
+  .IMG4 { grid-area: 2 / 3 / 4 / 4; 
+  
+   
+  }
+  
+  .IMG1 { grid-area: 2 / 2 / 3 / 3;   align-items:center;
+   
+  
+  }
+  .row{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+  .row.center{
+    justify-content: center;
+  }
+  img{
+    border-radius: 0.5rem;
+  }
+  img.meduimar{
+    /* max-width: 29rem; */
+    width:100%;
+    border-radius: 50%;
+
+
+  }
+  img.meduim{
+    /* max-width: 29rem; */
+    width:100%;
+  }
+  card{
+    border:0.1rem grey solid;
+    border-radius:0.5rem;
+    margin:1rem;
+  
+  }
+/*revoir ce cas commun au composant portfolio*/
+.card{
+  border:0.1rem grey solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin:1rem;
+  width:300px;
+}
+.cardar{
+  border:0.1rem grey solid;
+  background-color: #f8f8f8;
+  border-radius: 50%;
+  margin:1rem;
+  width:300px;
+}
+.card-body{
+  padding:1rem;
+
+}
+.card-body > *{
+  margin-bottom: 0.5rem;
+}
+
+
+
+  /*CSS COMPOSANT CONTACT*/
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  
+  
+  #ul:nth-of-type(1) {
+    list-style-position: inside;
+    padding: 0;
+    border-left: solid 2px red;
+    text-align: left;
+  }
+  .fcontainer{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    height:70px;
+    text-align: center;
+    color:white;
+  }
+    /*style pour contact bouton envoyer message */
+
+  .btn1 {
+  border: 0;
+  border-radius: 0.25rem;
+  background: #1E88E5;
+  color: white;
+  font-family: -system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem;
+  cursor: pointer;
+  }
+
+  /*style de download button*/
+  .btn2 {
+    border: 0;
+ border-radius: 0.25rem;
+ background: #eb4c81;
+ color: rgb(236, 229, 233);
+ font-family: -system-ui, sans-serif;
+ font-size: 1rem;
+ line-height: 2.2;
+ white-space: nowrap;
+ text-decoration: none;
+ padding: 0.25rem 0.5rem;
+ margin: 0.25rem;
+ cursor: pointer;
+ }
+  
+  
+  div.polaroid {
+    position: relative;
+    background: rgb(231, 234, 235) url("https://www.morgane-pastel.com/wp-content/uploads/2019/03/fond-ecran-la-vie-est-belle-iphone6-576x1024.jpg") no-repeat fixed center;
+    height:700px;
+    top:100px;
+    left:400px;
+    width: 750px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  }
+  /*PORTFOLIO*/
+  div.polaroid2 {
+    position: relative;
+    height:200px;
+    min-height: 200px;
+    top:100px;
+    left:200px;
+    width: 200px;
+    min-width:200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  }
+  /* CONTENU ABOUT ME IMAGE */
+  .navbar{
+    color:white;
+  }
+  .hero-image {
+    top:50px;
+    background: rgb(250, 248, 248) ;
+  
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative;
+  
+  }
+  
+  .hero-text {
+    text-align: left;
+    position: absolute;
+    width:700px;
+    height:700px;
+    top:30%;
+    left:30%;
+    font-size: 40px;
+    /* transform: translate(-50%, -50%); */
+    color: rgb(19, 18, 18);
+  }
+  
+  /*contenu du about me*/
+  div.polaroid {
+    width: 284px;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+  }
+  
+  div.rotate_right {
+    float: left;
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Safari */
+    transform: rotate(7deg);
+    width:100px;
+    height: 100px;
+  }
+  
+  div.rotate_left {
+    float: left;
+    -ms-transform: rotate(-8deg); /* IE 9 */
+    -webkit-transform: rotate(-8deg); /* Safari */
+    transform: rotate(-8deg);
+  }
+  
+  .flex-container{
+    display:flex;
+    width:1000px;
+    height:700px;
+  min-width: 500px;
+  }
+  .first
+  {
+    text-align: center;
+    
+  }
+  .second
+  {
+    text-align: center;
+    background: rgb(250, 248, 248) url("https://www.morgane-pastel.com/wp-content/uploads/2019/03/fond-ecran-la-vie-est-belle-iphone6-576x1024.jpg") no-repeat fixed center;
+  
+      /* background: lightblue url("http://www.allobalkans.com/wp-content/uploads/2019/02/Indon%C3%A9sie.jpg") no-repeat fixed center; */
+      background-repeat: no-repeat;
+      background-size: cover; /* Resize the background image to cover the entire container */
+  
+  }
+  .third
+  {
+  
+  
+    /* background: rgb(250, 248, 248) url("https://www.fe-pastel.com/wp-content/uploads/2019/03/fond-ecran-la-vie-est-belle-iphone6-576x1024.jpg") no-repeat fixed center; */
+  text-size-adjust:inherit;
+      /* background: lightblue url("https://image.freepik.com/photos-gratuite/femme-etiree-relaxante-dans-nature_23-2147658214.jpg") no-repeat fixed center; */
+      background-repeat: no-repeat;
+      background-size: cover; /* Resize the background image to cover the entire container */
+  
+  }
+  .for
+  {
+    text-align: center;
+    background: rgb(250, 248, 248) url("https://www.morgane-pastel.com/wp-content/uploads/2019/03/fond-ecran-la-vie-est-belle-iphone6-576x1024.jpg") no-repeat fixed center;
+  
+      /* background: lightblue url("http://www.allobalkans.com/wp-content/uploads/2019/02/Indon%C3%A9sie.jpg") no-repeat fixed center; */
+      background-repeat: no-repeat;
+      background-size: cover; /* Resize the background image to cover the entire container */
+  
+  }
+  .five
+  {
+    text-align: center;
+    background: rgb(250, 248, 248) url("https://www.morgane-pastel.com/wp-content/uploads/2019/03/fond-ecran-la-vie-est-belle-iphone6-576x1024.jpg") no-repeat fixed center;
+  
+      /* background: lightblue url("http://www.allobalkans.com/wp-content/uploads/2019/02/Indon%C3%A9sie.jpg") no-repeat fixed center; */
+      background-repeat: no-repeat;
+      background-size: cover; /* Resize the background image to cover the entire container */
+  
+  }
+  
+  
+  /*animation*/
+  
+  h3{text-align: center;
+    
+  }.p{
+    font-size: 10px;
+  }
+  /* COMPOSANT ABOUT WITH CSS GRID*/
+
+  .containertc { 
+     display: grid;
+    grid-template-columns: 0.8fr 1.8fr 1fr;
+    grid-template-rows: 0.4fr 3.3fr [C7] 2.1fr 2.1fr 1.6fr 0.7fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "HEADER HEADER HEADER"
+      "SDBC IMGC ZONE1"
+      "SDBC MC1 ZONE2"
+      "SDBC MC2 ZONE3"
+      "SDBC ADVERTIZEC ."
+      "MyFooter MyFooter MyFooter";
+  }
+  
+  .HEADERc { grid-area: HEADER; }
+  
+  .MyFooterc{ grid-area: MyFooter; text-align: center;background-color: rgb(241, 191, 216); }
+  
+  .SDBC { grid-area: SDBC;right:70%;left:50%;margin-left:50% }
+  
+  .IMGC { grid-area: IMGC;align-items: center;margin-left: 140px;}
+  
+  .ZONE1 { grid-area: ZONE1;  height:200px ; width:200px; color:hsl(0, 0%, 0%)}
+  .ZONE1 p{
+    font-size: 18px;
+    font:bold;
+    color:#530916;
+  }
+  
+  .ZONE2 { grid-area: ZONE2;align-items: center;/*background: url(zone1.jpeg) no-repeat*/
+    height:400px ; width:300px;}
+  
+  .ZONE3 { grid-area: ZONE3; }
+  
+  .MC1 { grid-area: MC1; color:#171817;font-size: 18px; }
+  .MC1 p{
+    font-size: 30px;
+    font:bold;
+    color:#530916;
+  }
+  .MC2 { grid-area: MC2; }
+  
+  .ADVERTIZEC { grid-area: ADVERTIZEC; }
+ 
+ 
+
+/*page acc
+*/
+/* *, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} */
+
+
+body {
+  background: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  /* height: 100vh; */
+  background: url(fe3.jpg);
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.container-first {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+
+h4 {
+  /* text-transform: uppercase; */
+  font-size: 110px;
+  color: #cce444;
+  font-family: Abril fatface, sans-serif;
+}
+h1 span {
+  position: relative;
+}
+.container-btns {
+  position: relative;
+  top: 50px;
+}
+.btn-first {
+  border: 2px solid #f1f1f1;
+  outline: none;
+  background: transparent;
+  font-size: 30px;
+  padding: 20px;
+  width: 300px;
+  color: #2e0311;
+  cursor: pointer;
+}
+.btn-first:nth-child(1){
+  margin-right: 30px;
+}
+.btn-first:hover {
+  transition: all 0.3s ease-in-out;
+  background: #f1f1f1;
+  color: #333;
+}
+.lignes {
+  position: absolute;
+  top: 6%;
+  left: 5%;
+}
+.l1 {
+  width: 250px;
+  height: 3px;
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+.l2 {
+  width: 140px;
+  height: 3px;
+  background: #f1f1f1;
+  border-radius: 5px;
+  position: relative;
+  top: 20px;
+}
+
+.logo {
+  position: absolute;
+  right: 2.9%;
+  top: 4%;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+.medias {
+  list-style-type: none;
+  position: absolute;
+  right: 3.3%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bulle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  background: #f1f1f1;
+  cursor: pointer;
+  position: relative;
+}
+
+.logo-medias {
+  width: 40px;
+  height: 40px;
+}
+/*typed*/
+.typed-text{
+  font-size:80px;
+  color:#e6c73e;
+}
