@@ -9,21 +9,17 @@ import Typed from "react-typed";
 // import  { useEffect } from 'react';
 
 export default function HomeScreen2() {
-//   useEffect(() => {
-//     const script = document.createElement('script');
-//     script.type = 'text/javascript';
-//     script.src = `https://github.com/Ziratsu/GSAP-Accueil-1/blob/master/app.js`;
-//     script.async = true;
-//     document.body.appendChild(script);
-
-//     }, []);
 const navigate=useNavigate();
+    const redirect=()=>{
 
+        navigate(`/contact`)
+        }
+        
 
-const checkoutHandler=()=>{
+const redirecttofb=()=>{
     window.location.href="https://www.facebook.com/dev.job.315/";
     }
-    const checkoutHandlerln=()=>{
+    const redirecttoin=()=>{
         window.location.href=" https://www.linkedin.com/in/ayari-ilh-54540a220/";
     }
   return ( 
@@ -37,7 +33,7 @@ const checkoutHandler=()=>{
         <div className="l2"></div>
     </div>
 <div>
-<h4>       <span>WEB </span><span>DEVELOPPMENT </span>
+<h4>       <span>WEB </span><span>DEVELOPMENT </span>
         {/* <span>Elhem</span><br/><span>Web </span><span>Developer </span> */}
         </h4>
 </div>
@@ -58,7 +54,7 @@ const checkoutHandler=()=>{
         <div className="container-btns">
             {/* <button className="btn-first b1">Discover</button> */}
             {/* <button className="btn-first b2">Contact Me</button> */}
-            <button className="primary">Contact Me</button>
+            <button className="primary"  onClick={redirect}>Contact Me</button>
         </div>
     </div>
 
@@ -68,25 +64,22 @@ const checkoutHandler=()=>{
 
 
     <ul className="medias">
-        <li className="bulle"><img src={inst} 
-        className="logo-medias" alt=""/></li>
+        {/* <li className="bulle"><img src={inst}         className="logo-medias" alt=""/></li> */}
         <li className="bulle">
     
             <img src={fb}         className="logo-medias" alt="" 
 
-    onClick={checkoutHandler}/>
+    onClick={redirecttofb}/>
      
              </li>
         <li className="bulle" 
-    onClick={checkoutHandlerln}><img src={ln}  
+    onClick={redirecttoin}><img src={ln}  
         className="logo-medias"  alt="" /></li>
-        <li className="bulle">
-          <img  src={inst}     className="logo-medias" alt=""/>
-        </li>
+        {/* <li className="bulle">          <img  src={inst}     className="logo-medias" alt=""/>        </li> */}
     </ul>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script> */}
         
 
       </div>

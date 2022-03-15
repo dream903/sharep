@@ -1,10 +1,32 @@
 import React from 'react';
 
 import cv from './cv.jpg';
+import Axios from 'axios';
+
 
 
 export default function ResumeScreen() {
   console.log(React.version);
+
+  const download=(e)=>
+  {
+    e.preventDefault()
+    Axios({
+      url:"http://localhost:3001/d",
+      method:"GET",
+      responseType:"blob"}).then((res)=>{
+        console.log(res);
+
+        const url=window.URL.createObjectURL(new Blob([res.data]));
+        const link=document.createElement('a');
+        link.href=url;
+        link.setAttribute('download','resume.pdf');
+        document.body.appendChild(link);
+        link.click();
+        // FileDownload(res.data,"download.pdf")
+      })
+   
+  }
   return (
 
 

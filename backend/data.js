@@ -25,7 +25,7 @@ const data={
             brand:'ITILLUSION',
             description:'Mon portfolio',
             outils:'react Js & NodeJs',
-            lien:'https://github.com/dream903/SHARE-PORTFOLIO',
+            lien:'https://github.com/dream903/SHARE-P',
 
         },
 
@@ -35,7 +35,7 @@ const data={
             image:'../images/aidesoc.jpg',
             brand:'MAS',
             description:'Prestation pour les employes licenciés', 
-            outils:'react Js & NodeJs',
+            outils:'JAVA/JEE & BD ORACLE',
             lien:'https://github.com/dream903/SHARE-PORTFOLIO',
 
 
@@ -66,7 +66,7 @@ const data={
             category:'c2',
             image:'../images/com.jpg',
             brand:'ITILLUSION',
-            outils:'React JS & NodeJS&MongoDB',
+            outils:'React JS & NodeJS & MongoDB',
             description:'Site pour transaction commerciale',
             lien:'https://github.com/dream903/SHARE-PORTFOLIO',
 
