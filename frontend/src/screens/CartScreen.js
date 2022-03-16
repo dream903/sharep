@@ -41,16 +41,7 @@ const removeFromCartHandler=(id)=>{
 
 
 const checkoutHandler=()=>{
-// props.history.push('/signin?redirect=shipping')
-const paramsString = '/signin?redirect=shipping';
-// var searchParams = new URLSearchParams(paramsString);
-// console.log(redirectInUrl);
-const redirectInUrl =  new URLSearchParams(paramsString);
-// new URLSearchParams('/signin?redirect=shipping').get('redirect');
 
-// const redirect = redirectInUrl?redirectInUrl:1;
-console.log(redirectInUrl);
-// navigate(`/signin?redirect=shipping`);
 navigate(`/signin?redirect=shipping`)
 }
 

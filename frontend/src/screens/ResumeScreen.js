@@ -1,4 +1,5 @@
 import React from 'react';
+import {  useNavigate } from 'react-router-dom';
 
 import cv from './cv.jpg';
 import Axios from 'axios';
@@ -41,11 +42,11 @@ export default function ResumeScreen() {
             <h3>Le parcours </h3>
 
             <p>
-         Développeur full stack certifié Scrum, avec plus de 2 ans d’expérience. Mordu d’informatique, 
- j’ai appris à coder dès mon plus jeune âge dans divers langages informatiques (Javascript, PHP, AngularJS…)
- et ai créé des projets personnels, dont un site référençant les vidéos les plus vues sur la plateforme Twitch 
- 
-(+ 5000 visites/mois). Polyvalent, je maîtrise les différentes étapes techniques de la création d’un site ou d’une application web ; de la compréhension des besoins utilisateurs, au développement frontend et backend en passant par la maintenance. 
+         Développeur full stack certifié Scrum, avec plus de 10 ans d’expérience. Mordu d’informatique, 
+          j’ai codé dans divers langages informatiques (Javascript, PHP, ReactJS)
+          et ai créé differents projets . 
+          Polyvalent, je maîtrise les différentes étapes techniques de la création d’un site ou d’une application web ;
+          de la compréhension des besoins utilisateurs, au développement frontend et backend en passant par la maintenance. 
     
               </p>
 

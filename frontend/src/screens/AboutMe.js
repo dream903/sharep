@@ -74,16 +74,22 @@ export default function AboutMe() {
             
             </div>
                                 eldream903@gmail.com
-         
-                                
-                <div className='col-8-form-group mx-auto'>
+                                {/* <div className='col-8-form-group mx-auto'> */}
                                        <input type="button" className='primary'  value="Download Resume" onClick={(e)=>download(e)}></input>
-                                   </div>
+                                   {/* </div> */}
+                                <img src={sb4}></img>
+
+
+                                je m'inspire de la nature et des civilizations
+
+                                
+              
                 </div>
             <div className="ZONE2">
-            <img src={sb4}></img>
+            {/* je m'inspire de la nature et des civilizations
 
-                            
+            <img src={sb4}></img>
+                             */}
             </div>
             <div className="ZONE3">
             {/* <img src={jm}></img> */}
