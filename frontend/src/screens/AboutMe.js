@@ -1,13 +1,13 @@
 import React from 'react';
 import Axios from 'axios';
 // import FileDownload from 'js-file-download';
-import ilh from './ilh.jpg';
-import tunisia from './tunisia.jpg';
-import tn from './tn.jpg';
-import sb4 from './sb4.jpg';
-import jm from './jm.jpg';
+import ilh from './img/ilh.jpg';
+import tunisia from './img/tunisia.jpg';
+// import tn from './tn.jpg';
+import sb4 from './img/sb4.jpg';
+import jm from './img/jm.jpg';
 
-import isg from './isg.jpg';
+import isg from './img/isg.jpg';
 
 export default function AboutMe() {
 

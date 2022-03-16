@@ -1,7 +1,7 @@
 import React from 'react';
 import {  useNavigate } from 'react-router-dom';
 
-import cv from './cv.jpg';
+import cv from './img/cv.jpg';
 import Axios from 'axios';
 
 

@@ -1,6 +1,6 @@
-import inst from './inst.svg';
-import fb from './fb.svg';
-import ln from './ln.svg';
+// import inst from './img/inst.svg';
+import fb from './img/fb.svg';
+import ln from './img/ln.svg';
 import {  useNavigate } from 'react-router-dom';
 import Typed from "react-typed";
 
